@@ -3,6 +3,10 @@ using System.Text;
 
 namespace Spaghet.Hl7; 
 
+/// <summary>
+/// The HL7 message is the top level Hl7.
+/// The Hl7 message is a collection of Hl7 <see cref="Segment"/>s or <see cref="Group"/>s.
+/// </summary>
 public readonly struct Message : IHl7Part {
 
     internal readonly Delimiters Delimiters;

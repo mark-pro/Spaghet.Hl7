@@ -2,6 +2,11 @@ using System.Collections.Immutable;
 
 namespace Spaghet.Hl7; 
 
+/// <summary>
+/// The Hl7 Component is a collection of Hl7 <see cref="Entry"/> or <see cref="SubComponent"/>
+/// The component is contained within a field and typically delimited by the caret (^).
+/// <example>|John^Doe|</example>
+/// </summary>
 public readonly struct Component : IHl7Part {
     private readonly Delimiters _delimiters;
     public ImmutableArray<IHl7Part> Entries { get; }

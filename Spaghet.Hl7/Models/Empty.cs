@@ -2,6 +2,9 @@ using System.Collections.Immutable;
 
 namespace Spaghet.Hl7; 
 
+/// <summary>
+/// Essentially an <see cref="Entry"/> that is empty.
+/// </summary>
 public readonly struct Empty : IHl7Part {
     
     public static readonly Empty Default = new ();

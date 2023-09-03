@@ -2,6 +2,10 @@ using System.Collections.Immutable;
 
 namespace Spaghet.Hl7; 
 
+/// <summary>
+/// The Hl7 Segment is a collection of Hl7 Fields that represent such as PID|1|
+/// A message is made up of multiple segments such as MSH, PID, and IN1.
+/// </summary>
 public readonly struct Segment : IHl7Part {
     private readonly Delimiters _delimiters;
     public ImmutableArray<IHl7Part> Entries { get; }

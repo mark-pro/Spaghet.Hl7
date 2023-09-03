@@ -2,6 +2,10 @@ using System.Collections.Immutable;
 
 namespace Spaghet.Hl7; 
 
+/// <summary>
+/// Hl7 Field is a group typically between pipes (|) such as PID|1|12345| where 12345 is a field.
+/// A field can container a <see cref="Component">, <see cref="Repetition">, or a <see cref="Component"/> with <see cref="SubComponent"/>
+/// </summary>
 public readonly struct Field : IHl7Part {
     private readonly Delimiters _delimiters;
     public ImmutableArray<IHl7Part> Entries { get; }
